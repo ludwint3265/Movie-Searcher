@@ -3,23 +3,18 @@ import './App.css'
 function App() {
   return (
     <>
-      <div>
-        <p>Hello, world!</p>
-      </div>
-      <div>
-        <p>Goodbye, world!</p>
-      </div>
-      <anotherFun />
+      <AnotherFun  text="my_mom.jpeg"/>
+      <AnotherFun  text="its twitter not X :/"/>
     </>
   );
 }
 
-function anotherFun(){
+function AnotherFun({text}){
   return(
     <div>
-      <p>bottom text</p>
+      <p>{text}</p>
     </div>
   );
 }
 
-export default App
+export default App;
