@@ -1,20 +1,22 @@
-import './App.css'
+function MovieCard({movie}){
 
-function App() {
-  return (
-    <>
-      <AnotherFun  text="my_mom.jpeg"/>
-      <AnotherFun  text="its twitter not X :/"/>
-    </>
-  );
+function onFavClick(){
+  alert("clicked")
 }
 
-function AnotherFun({text}){
-  return(
-    <div>
-      <p>{text}</p>
+return <div className="movie-card">
+  <div className="movie-poster">
+    <img src={movie.url} alt={movie.title}/>
+    <div className="movie-overlay"> 
+      <button className="favorite-button" onClick={onFavClick}>
+        ♥
+      </button>
     </div>
-  );
+  </div>
+  <div className="movie-info">
+    <h3>{movie.title}</h3>
+  </div>
+</div>
 }
 
 export default App;
